@@ -25,6 +25,30 @@ body {
     letter-spacing: .075em;
 }
 
+.btn-primary {
+    border-radius: 7px!important;
+    background-color: #f5564e;
+    border-color: #f5564e;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    border-color: #f5564e;
+    color: #f5564e;
+    /* opacity: 80%; */
+}
+
+.card {
+    box-shadow: 0px 0px .1em grey!important;
+    border-radius: 10px!important;
+    border: none;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px!important;
+    border-top-right-radius: 10px!important;
+}
+
 .search-content {
     margin: auto;
 }
@@ -78,3 +102,11 @@ h2, p {
     box-shadow: 0px 0px 1.5em grey;
     border-radius: 10px;
 }
+
+.newsImg {
+    object-fit: cover;
+    border-width: 3px;
+    /* border-color: red; */
+    width: 25;
+    height: 16em;
+  }
