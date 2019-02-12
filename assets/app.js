@@ -1,17 +1,23 @@
-var userTeam = ["team"];
-    
-var thing = "";
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+};
+
+$(document).ready(function () {
+   
+var thing = localStorage.getItem('team');
+displayInfo();
 // handles addthing button event
-$("#search-btn2").on("click", function(){
+$("#search-btn2").on("click", function(e){
+  thing = $("#search2").val().trim();
+  localStorage.setItem('team', thing);
+    // grabs the user thing input
+    // that input is now added to the array
+  userTeam.push(thing);
 
-// grabs the user thing input
-thing = $("#search2").val().trim();
-// that input is now added to the array
-userTeam.push(thing);
-
-// this line is so users can hit "enter" instead of clicking the submit button
-return false; 
-})
+    // this line is so users can hit "enter" instead of clicking the submit button
+  return false; 
+    })
 
 
 function displayInfo(){
@@ -44,15 +50,7 @@ $.ajax({
     $('#team-logo').attr("src", response.teams[0].strTeamLogo);
     $('#year-formed').text(response.teams[0].intFormedYear);
     $('#manager').text(response.teams[0].strManager);
-
-    $('#scroll-btn').empty()
     $('#description').text(response.teams[0].strDescriptionEN);
-    $('<button>').attr({
-      "onclick": "topFunction()",
-      "id": "scrollTop",
-      "title": "Back to Top",
-      "class": "btn btn-primary"
-      }).text('back to top').appendTo('#scroll-btn');
 
     var imgAlt = (response.teams[0].strTeamLogo);
     console.log(imgAlt);
@@ -75,10 +73,6 @@ $.ajax({
   });
 }
 
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
 
 function marker(query2URL) {
   $.ajax({
@@ -118,7 +112,7 @@ function marker(query2URL) {
             var goToArticle = $('<a>').attr({
               "href": newsURL,
               "class": "btn btn-primary mt-auto",
-              "target": "_blank"
+              "target":"_blank"
             }).text('View Article');           
 
             $(cardBody).append(title, description, date, goToArticle);
@@ -132,12 +126,17 @@ console.log(response);
 })};
 
 
-// starts displayGif function on click
+// starts displayInfo function on click
 $('#search-btn2').on("click", function (){
   if (thing != "") {
     displayInfo();
   }
-  // else {
-  //   alert("Type something into the search box")
-  // }
+});
+
+$('#search-btn1').on("click", function (e){
+  e.preventDefault();
+console.log("clicked");
+});
+
+// close out $(document).ready()
 });

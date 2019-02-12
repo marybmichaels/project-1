@@ -10,31 +10,54 @@
     <title>Sports Search</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style-index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- link to jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="assets/app.js"></script> -->
 
 
-<!-- link to jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
    <body>
-        <div class="row col-7 mt-0 p-0" id="main-logo">
+        <div class="row col-6 mt-0 p-0" id="main-logo">
             <img src="assets/images/cover-pg_logo.png" id="mn-logo-img">
         </div>
         <br><br>
 
     <div class="input-group mb-3 row col-5" id=search-bar>
-            <input type="text" class="form-control" placeholder="Search a Sports Team here..." aria-label="search-input" aria-describedby="button-addon2">
+            <input type="text" class="form-control shadow" placeholder="Search a Sports Team here..." aria-label="search-input" aria-describedby="button-addon2" id="search1">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2 search-btn1">Search</button>
+              <a href="info-pg.html">
+                  <button class="btn btn-danger shadow" type="button" id="button-addon2">search</button>
+                </a>
             </div>
           </div>
-       
+    <div id="logo-section" class="m-auto">
+        <p>No matter the sport, we're here for you!</p>
+        <div class="row">
+            <div class="col-4">
+                </div>
+                <div class="row col-4">
+                <img src="assets/images/nfl-logo.png" class="spt-logo col-3">
+            <!-- </div> -->
+            <!-- <div class="col-3"> -->
+                <img src="assets/images/MLB-logo.png" class="spt-logo col-3">
+            <!-- </div> -->
+            <!-- <div class="col-3"> -->
+                <img src="assets/images/FIFA-Logo-old.png" class="spt-logo col-3">
+            <!-- </div> -->
+            <!-- <div class="col-3"> -->
+                <img src="assets/images/nba-logo.png" class="spt-logo col-3">
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>   
        <!-- link to jQuery -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
        <!-- link to materialize -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
        
-       <script type="text/javascript" src="assets/app.js"></script>
+       <script type="text/javascript" src="assets/cover-app.js"></script>
     
     </body>
 
