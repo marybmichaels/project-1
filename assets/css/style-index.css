@@ -1,6 +1,3 @@
-html{
-    /* background-image: url(https://files.slack.com/files-pri/TE4QED1C2-FG31FLA13/cover-pg_background.png); */
-}
 body{
     background-image: url(../images/cover-pg_background.png);
     background-repeat:no-repeat;
@@ -10,7 +7,7 @@ body{
     /* background-attachment: fixed; */
     /* background-position-x: center; */
     margin-top: 4%;
-
+	font-family: 'Roboto', sans-serif;
 }
 /* header{
     text-align: center;
@@ -25,7 +22,8 @@ body{
 
 p {
     color: white;
-    /* text-align: center; */
+    text-align: center;
+	font-family: 'Roboto', sans-serif;
     /* font-size: 22px; */
 }
 
@@ -39,8 +37,40 @@ p {
     display: block;
 }
 
+#search1 {
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+    border-top-left-radius: 7px!important;
+    border-bottom-left-radius: 7px!important;
+    border: none;
+    font-weight: 300;
+}
+
+.btn {
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+    border-top-right-radius: 7px!important;
+    border-bottom-right-radius: 7px!important;
+    background-color: #f5564e!important;
+    border-color: #f5564e!important;
+    font-weight: 700;
+    letter-spacing: .075em;
+}
+
+.spt-logo {
+    height: 65px;
+    width: 100%;
+    /* width: auto; */
+    object-fit: contain;
+}
+
+#logo-section {
+    position:fixed;    /*Here's what sticks it*/
+    bottom:0;
+    padding-bottom: 3%;
+}
+
 /* #background-img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
     margin: auto;

@@ -4,7 +4,7 @@ body {
 }
 
 /* Navbar Search Input */
-#search1, #search2 {
+#search2 {
     border-top-right-radius: 0px!important;
     border-bottom-right-radius: 0px!important;
     border-top-left-radius: 7px!important;
@@ -14,13 +14,13 @@ body {
 }
 
 /* Navbar search button */
-#search-btn1, #search-btn2 {
+#search-btn2 {
     border-top-left-radius: 0px!important;
     border-bottom-left-radius: 0px!important;
     border-top-right-radius: 7px!important;
     border-bottom-right-radius: 7px!important;
-    background-color: #f5564e;
-    border-color: #f5564e;
+    background-color: #f5564e!important;
+    border-color: #f5564e!important;
     font-weight: 700;
     letter-spacing: .075em;
 }
