@@ -4,7 +4,7 @@ body {
 }
 
 /* Navbar Search Input */
-#search2 {
+#search1, #search2 {
     border-top-right-radius: 0px!important;
     border-bottom-right-radius: 0px!important;
     border-top-left-radius: 7px!important;
@@ -14,7 +14,7 @@ body {
 }
 
 /* Navbar search button */
-#search-btn2 {
+#search-btn1, #search-btn2 {
     border-top-left-radius: 0px!important;
     border-bottom-left-radius: 0px!important;
     border-top-right-radius: 7px!important;
@@ -55,7 +55,8 @@ body {
 
 h1, h2 {
     font-weight: 700;
-    letter-spacing: .04em;
+    letter-spacing: .03em;
+    line-height: 90%;
 }
 
 h2 {
@@ -70,7 +71,7 @@ h2, p {
     line-height: 1.02em;
 }
 
-#sportType {
+#sportType, #desc-header {
     font-weight: 300;
     letter-spacing: .05em;
     font-size: 1.4em;
@@ -110,3 +111,16 @@ h2, p {
     width: 25;
     height: 16em;
   }
+
+#footer {
+    background-color: #343a40;
+    width: 100%;
+    height: 30px;
+}
+
+#scrollTop {
+    background-color: white;
+    border-color: #f5564e;
+    color: #f5564e;
+    width: 15%;
+}
