@@ -44,7 +44,15 @@ $.ajax({
     $('#team-logo').attr("src", response.teams[0].strTeamLogo);
     $('#year-formed').text(response.teams[0].intFormedYear);
     $('#manager').text(response.teams[0].strManager);
+
+    $('#scroll-btn').empty()
     $('#description').text(response.teams[0].strDescriptionEN);
+    $('<button>').attr({
+      "onclick": "topFunction()",
+      "id": "scrollTop",
+      "title": "Back to Top",
+      "class": "btn btn-primary"
+      }).text('back to top').appendTo('#scroll-btn');
 
     var imgAlt = (response.teams[0].strTeamLogo);
     console.log(imgAlt);
@@ -67,6 +75,11 @@ $.ajax({
   });
 }
 
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 function marker(query2URL) {
   $.ajax({
     url: query2URL,
@@ -87,17 +100,25 @@ function marker(query2URL) {
             var newsURL = response.articles[i].url;
     
             var newCard = $('<div>').attr("class", "card");
+            if (newsImageUrl != "") {
             var cardImg = $('<img>').attr({
               "class": "card-img-top newsImg",
               "src": newsImageUrl,
             });
-            var cardBody = $('<div>').addClass("card-body");
+          } else {
+            var cardImg = $('<img>').attr({
+              "class": "card-img-top newsImg",
+              "src": "assets/images/news-img.png",
+          });
+        };
+            var cardBody = $('<div>').addClass("card-body d-flex flex-column");
             var title = $('<h5>').addClass("card-title").text(newsTitle);
             var description = $('<p>').addClass("card-text").text(newsDescript);
-            var date = $('<p>').addClass('card-text text-muted').text(newsDate);
+            var date = $('<p>').addClass('card-text text-muted').text(dateFns.format(new Date(newsDate), 'MM/DD/YYYY'));
             var goToArticle = $('<a>').attr({
               "href": newsURL,
-              "class": "btn btn-primary"
+              "class": "btn btn-primary mt-auto",
+              "target": "_blank"
             }).text('View Article');           
 
             $(cardBody).append(title, description, date, goToArticle);
@@ -112,4 +133,11 @@ console.log(response);
 
 
 // starts displayGif function on click
-$('#search-btn2').on("click", displayInfo);
+$('#search-btn2').on("click", function (){
+  if (thing != "") {
+    displayInfo();
+  }
+  // else {
+  //   alert("Type something into the search box")
+  // }
+});
