@@ -108,7 +108,8 @@ function marker(query2URL) {
             var cardBody = $('<div>').addClass("card-body d-flex flex-column");
             var title = $('<h5>').addClass("card-title").text(newsTitle);
             var description = $('<p>').addClass("card-text").text(newsDescript);
-            var date = $('<p>').addClass('card-text text-muted').text(dateFns.format(new Date(newsDate), 'MM/DD/YYYY'));
+            // var date = $('<p>').addClass('card-text text-muted').text(dateFns.format(new Date(newsDate), 'MM/DD/YYYY'));
+            var date = $('<p>').addClass('card-text text-muted').text(newsDate);
             var goToArticle = $('<a>').attr({
               "href": newsURL,
               "class": "btn btn-primary mt-auto",
