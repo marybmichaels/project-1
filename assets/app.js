@@ -58,6 +58,14 @@ $.ajax({
       $('#team-logo').attr("src",response.teams[0].strTeamBadge);
     }
   
+    if (imgAlt === null) {
+     $('#team-logo').attr("src",response.teams[0].strTeamBadge);
+   }
+
+   if (response.teams[0].strTeamFanart3 === null) {
+     document.getElementById("team-img").src = "http://www.gahannaschools.org/Uploads/Images/SiteWebTools/AthleticsGeneric.jpg";
+    }
+    
     // Yankees alt img
     if (response.teams[0].idTeam === "135260"){
       console.log("yay");
